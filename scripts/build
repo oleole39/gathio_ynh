@@ -12,7 +12,7 @@ set -x
 upstream_owner="lowercasename"
 upstream_repo="gathio"
 upstream_branch="main"
-ynh_owner="Yunohost-Apps"
+ynh_owner="oleole39"
 ynh_repo="gatio_ynh"
 build_node_version=$nodejs_version
 source_type="release"
