@@ -57,7 +57,7 @@ pushd "$build_folder"
     fi
     
     # Actual build instructions
-    corepack enable pnpm && pnpm --allow-build=cypress add --save-dev cypress && pnpm --allow-build=generate-rsa-keypair add generate-rsa-keypair && pnpm install && BASE_URL="/__YNH_SUBDIR_PATH__" pnpm build
+    corepack enable pnpm && pnpm install && pnpm --allow-build=cypress add --save-dev cypress && pnpm --allow-build=generate-rsa-keypair add generate-rsa-keypair && BASE_URL="/__YNH_SUBDIR_PATH__" pnpm build
 
     # Package   
     mv "${default_build_folder}" "${ynh_repo}"
