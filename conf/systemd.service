@@ -1,5 +1,5 @@
 [Unit]
-Description=Small description of the service
+Description="Gathio, a simple, federated, privacy-first event hosting platform."
 After=network.target
 
 [Service]
@@ -7,12 +7,11 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=__INSTALL_DIR__/script
+ExecStart=__NODEJS_PATH__/pnpm start
 StandardOutput=append:/var/log/__APP__/__APP__.log
 StandardError=inherit
+Restart=on-failure
 
-### Depending on specificities of your service/app, you may need to tweak these
-### .. but this should be a good baseline
 # Sandboxing options to harden security
 # Details for these options: https://www.freedesktop.org/software/systemd/man/systemd.exec.html
 NoNewPrivileges=yes
@@ -47,3 +46,15 @@ CapabilityBoundingSet=~CAP_SYS_ADMIN CAP_SYS_PTRACE CAP_SYSLOG
 
 [Install]
 WantedBy=multi-user.target
+
+[Unit]
+Description=Gathio
+After=network.target
+
+[Service]
+Type=simple
+User=gathio
+WorkingDirectory=/srv/gathio
+ExecStart=/usr/bin/pnpm start
+Restart=on-failure
+

@@ -1,0 +1,52 @@
+version = "1.0"
+
+[main]
+name = "Pink Arrows settings"
+
+    [main.customization]
+    name = "Customization"
+
+        [main.customization.site_name]
+        ask.en = "Instance Name"
+        ask.fr = "Nom de l'instance"
+        type = "string"
+        default = "Gathio @YNH"
+
+        [main.customization.email_logo_url]
+        ask.en = "Logo URL" 
+        ask.fr = "URL du logo"
+        type = "file" #FIXME
+        accept = ["image/png", "image/jpg", "image/gif"]
+        help.en = "Logo dispayed in the emails Gathio sends."
+        help.fr = "Logo affiché dans les emails envoyés par Gathio."
+        bind = "__INSTALL_DIR__/assets/watermark.png" #FIXME
+
+        [main.customization.send_email_from]
+        ask.en = "Contact email"
+        ask.fr = "Email de contact"
+        type = "email"
+        default = "contact@$domain"
+        help.en = "Email address appearing the in the 'from' field of the emails Gathio sends."
+        help.fr = "Adresse email apparaissant dans le champ 'expéditeur' des emails envoyés par Gathio."
+
+        [main.customization.delete_after_days]
+        ask.en = "Number of days after which events will be deleted once they have ended."
+        ask.fr = "Nombre de jours après lesquels effacer les évènements une fois qu'ils sont terminés."
+        type = "number"
+        default = 7
+        help.en = "Set to 0 to disable automatic deletion (old events will never be deleted)."
+        help.fr = "Entrez 0 pour désactiver la suppression automatique (les anciens évènements ne seront jamais effacés)."
+
+        [main.customization.is_federated]
+        ask.en = "Enable ActivityPub federation features"
+        ask.fr = "Activer les fonctionnalités de fédération ActivityPub"
+        type = "boolean"
+        default = "true"
+
+        [main.customization.show_public_event_list]
+        ask.en = "Show public event list on the home page."
+        ask.fr = "Afficher la liste des évènements publics sur la page d'accueil."
+        type = "boolean"
+        default = "false"
+        help.en = "Show a list of events and groups on the front page which have been marked as 'Display this event/group on the public event/group list'. This list becomes the home page, and the about page with information on Gathio remains available at /about."
+        help.fr = "Affiche sur la page d'accueil une liste d'évènements et de groupes qui ont été indiqués comme 'publics'. La page d'information sur Gathio reste disponible à l'URL '/about'."
