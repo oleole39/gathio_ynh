@@ -12,7 +12,7 @@ upstream_repo="gathio"
 upstream_branch="main"
 ynh_owner="oleole39"
 ynh_repo="gatio_ynh"
-build_node_version=22
+build_node_version=18
 source_type="release"
 default_build_folder="dist" # often 'dist'
 
