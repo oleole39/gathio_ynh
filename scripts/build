@@ -57,8 +57,8 @@ pushd "$build_folder"
     fi
     
     # Actual build instructions
-    corepack enable pnpm && corepack use pnpm@latest-9 && pnpm install && pnpm build 
-    ls dist
+    corepack enable pnpm && pnpm install && BASE_URL="/__YNH_SUBDIR_PATH__" pnpm build
+    #corepack enable pnpm && corepack use pnpm@latest-9 && pnpm install && pnpm build 
     
     # Package   
     mv "${default_build_folder}" "${ynh_repo}"
