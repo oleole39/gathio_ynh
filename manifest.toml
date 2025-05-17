@@ -72,11 +72,6 @@ ram.runtime = "50M"
     type = "boolean"
     default = "true"
 
-    [install.is_federated]
-    ask.en = "Enable ActivityPub federation features"
-    ask.fr = "Activer les fonctionnalités de fédération ActivityPub"
-    type = "boolean"
-    default = "true"
 [resources]
 
     [resources.sources]
