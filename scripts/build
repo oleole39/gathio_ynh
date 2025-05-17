@@ -58,7 +58,7 @@ pushd "$build_folder"
     
     # Actual build instructions
     corepack enable pnpm && corepack use pnpm@latest-9 && pnpm install && pnpm build
-    ls && ls dist
+    ls dist
 
     # Package   
     mv "${default_build_folder}" "${ynh_repo}"
