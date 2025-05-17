@@ -31,7 +31,7 @@ ynh_mongo_setup_db --db_user=$db_user --db_name=$db_name
 ynh_script_progression "Setting up source files..."
 
 # Download, check integrity, uncompress and patch the source from manifest.toml
-ynh_setup_source --dest_dir="$install_dir"
+ynh_setup_source --dest_dir="$install_dir" --source_id=ynh_build
 
 chown -R "$app:www-data" "$install_dir"
 

@@ -82,9 +82,17 @@ ram.runtime = "50M"
     [resources.sources]
 
         [resources.sources.main]
+        # This is not used as we are using git clone. It's only here for autoupdate.
         url = "https://github.com/lowercasename/gathio/archive/refs/tags/v1.5.2.tar.gz"
         sha256 = "31fd0774e4224db8ad9f45b81af523027113decf7e289cc4ea28c311488bda61"
         autoupdate.strategy = "latest_github_release"
+
+        [resources.sources.ynh_build]
+        url = "https://github.com/oleole39/gathio_ynh/releases/download/v1.5.2/gathio_v1.5.2_ynh.zip"
+        sha256 = "df8634cb5bbc70f273dbc4ad0ae2e8c9fd50abbe234d91d9d5a1e35898e91f67"
+        format = "zip"
+        extract = true
+        in_subdir = true
 
     [resources.system_user]
 
