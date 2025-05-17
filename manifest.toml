@@ -54,7 +54,7 @@ ram.runtime = "50M"
     ask.en = "Contact email"
     ask.fr = "Email de contact"
     type = "email"
-    default = "contact@$domain"
+    #default = "contact@$domain"
     help.en = "Email address appearing the in the 'from' field of the emails Gathio sends."
     help.fr = "Adresse email apparaissant dans le champ 'expéditeur' des emails envoyés par Gathio."
 
